@@ -11,6 +11,8 @@ size = Vector2(1898, 74)
 
 [node name="Player" parent="." instance=ExtResource("1_esxrb")]
 position = Vector2(136, -8)
+gravity = 3000
+jump_speed = 1200
 
 [node name="Ground" type="StaticBody2D" parent="."]
 position = Vector2(2.063, 0)
