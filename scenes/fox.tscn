@@ -1,0 +1,78 @@
+[gd_scene load_steps=6 format=3 uid="uid://6d01ma6gkfdu"]
+
+[ext_resource type="Script" path="res://scripts/spike.gd" id="1_wvqmi"]
+[ext_resource type="Texture2D" uid="uid://da4yibg0judo8" path="res://assets/fox-NESW.png" id="2_f8nsg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r2afr"]
+size = Vector2(141, 99)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l06gw"]
+texture = ExtResource("2_f8nsg")
+1:2/0 = 0
+4:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+1:10/0 = 0
+4:10/0 = 0
+7:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+0:14/0 = 0
+1:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+5:14/0 = 0
+6:14/0 = 0
+7:14/0 = 0
+0:15/0 = 0
+1:15/0 = 0
+2:15/0 = 0
+3:15/0 = 0
+4:15/0 = 0
+5:15/0 = 0
+6:15/0 = 0
+7:15/0 = 0
+8:15/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_3b24m"]
+sources/0 = SubResource("TileSetAtlasSource_l06gw")
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_wvqmi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16.5, 13.5)
+shape = SubResource("RectangleShape2D_r2afr")
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2(4, 4)
+tile_set = SubResource("TileSet_3b24m")
+format = 2
+layer_0/tile_data = PackedInt32Array(-1, 196608, 14, 65535, 196608, 15, -65536, 262144, 14, 0, 262144, 15, -65535, 327680, 14, 1, 327680, 15)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

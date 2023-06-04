@@ -1,0 +1,9 @@
+1.1
+- Deleted less-detailed 32x32 sprite.
+- Created S/W/E/N versions.
+
+1.0
+- Re-worked & re-colored by bleutailfly.
+
+0.1
+- Re-worked patvanmackelberg's wolf sprite (CC0) for use as fox in Stendhal.

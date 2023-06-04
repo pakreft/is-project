@@ -23,6 +23,11 @@ func _physics_process(delta):
 		velocity.y *= low_jump_multiplier
 	
 	move_and_slide()
+	
+func _process(delta):
+	if position.y > 10000:
+		position.x = 0
+		position.y = -20
 
 func get_gravity() -> float:
 	return jump_gravity if velocity.y < 0.0 else fall_gravity
