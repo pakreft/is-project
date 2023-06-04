@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ol4p7e6k7bgp"]
 
-[ext_resource type="PackedScene" uid="uid://dk2rgrhrsa37w" path="res://scenes/player.tscn" id="1_esxrb"]
+[ext_resource type="PackedScene" uid="uid://ck1d5bxa0yeu2" path="res://scenes/player.tscn" id="1_esxrb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ukxfu"]
 size = Vector2(1898, 74)
@@ -11,8 +11,9 @@ size = Vector2(1898, 74)
 
 [node name="Player" parent="." instance=ExtResource("1_esxrb")]
 position = Vector2(136, -8)
-gravity = 3000
-jump_speed = 1200
+move_speed = 800
+gravity = 4000
+jump_speed = 1600
 
 [node name="Ground" type="StaticBody2D" parent="."]
 position = Vector2(2.063, 0)
