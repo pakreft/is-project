@@ -13,7 +13,7 @@ extends CharacterBody2D
 
 
 func _physics_process(delta):
-	#velocity.x = move_speed
+	velocity.x = move_speed
 	velocity.y += get_gravity() * delta
 	
 	if Input.is_action_pressed("jump") and is_on_floor():
