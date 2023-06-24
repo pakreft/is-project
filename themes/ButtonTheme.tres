@@ -1,0 +1,19 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://c02f3iitqaf3c"]
+
+[ext_resource type="FontFile" uid="uid://bo8wxui5bkcwf" path="res://font/Super Comic.ttf" id="1_nlct6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xfblg"]
+bg_color = Color(0.403922, 0.658824, 0.615686, 1)
+border_color = Color(0.929412, 0.729412, 0.878431, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(0.768627, 0.764706, 0.745098, 0.6)
+shadow_size = 2
+
+[resource]
+default_font = ExtResource("1_nlct6")
+Button/colors/font_color = Color(0.831373, 0.909804, 0.713726, 1)
+Button/font_sizes/font_size = 16
+Button/styles/normal = SubResource("StyleBoxFlat_xfblg")
