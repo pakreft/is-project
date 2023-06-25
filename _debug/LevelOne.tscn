@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://6imidygod2c3"]
+[gd_scene load_steps=19 format=3 uid="uid://bcfxfrhi2kqky"]
 
 [ext_resource type="Script" path="res://scripts/LevelOne.gd" id="1_8wh67"]
 [ext_resource type="PackedScene" uid="uid://ck1d5bxa0yeu2" path="res://scenes/player.tscn" id="1_mcbjd"]
@@ -12,9 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://deiwoxq5qcajd" path="res://assets/sprites/PlatformerForestTileset16x16/tileset.png" id="12_jt03c"]
 [ext_resource type="PackedScene" uid="uid://35ij4p0y15at" path="res://scenes/bear.tscn" id="13_2l4xo"]
 [ext_resource type="Texture2D" uid="uid://don4rgf4kqf75" path="res://assets/sprites/ParallaxSunset/Sunset/7.png" id="13_ru56s"]
-[ext_resource type="PackedScene" uid="uid://dt2ejofrmg37y" path="res://scenes/flag.tscn" id="14_gb46b"]
+[ext_resource type="PackedScene" path="res://scenes/flag.tscn" id="14_gb46b"]
 [ext_resource type="Texture2D" uid="uid://d2yuf3o5f4q86" path="res://assets/sprites/ParallaxSunset/Sunset/8.png" id="14_ygtno"]
-[ext_resource type="PackedScene" uid="uid://dn127qf4x73in" path="res://scenes/bat.tscn" id="15_qfem8"]
+[ext_resource type="PackedScene" path="res://scenes/bat.tscn" id="15_qfem8"]
 
 [sub_resource type="GDScript" id="GDScript_6tkd8"]
 script/source = "extends ParallaxBackground
