@@ -7,6 +7,8 @@ func _ready():
 
 func _exit_tree():
 	Globals.lastLevelLoaded = "res://_debug/LevelOne.tscn"
+	SoundController.play_game_over_sound()
+	
 
 
 
