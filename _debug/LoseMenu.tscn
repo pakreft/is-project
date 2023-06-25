@@ -1,0 +1,175 @@
+[gd_scene load_steps=13 format=3 uid="uid://mpw4odo4tpco"]
+
+[ext_resource type="Script" path="res://_debug/LoseMenu.gd" id="1_j2l3c"]
+[ext_resource type="Texture2D" uid="uid://dfg4simi5o72r" path="res://assets/sprites/ParallaxSunset/Sunset/Background.png" id="2_6uquu"]
+[ext_resource type="Texture2D" uid="uid://cp4widdhjc7hr" path="res://assets/sprites/ParallaxSunset/Sunset/1.png" id="3_dy542"]
+[ext_resource type="Texture2D" uid="uid://bs5cb4upag7eh" path="res://assets/sprites/ParallaxSunset/Sunset/2.png" id="4_h8fn1"]
+[ext_resource type="Texture2D" uid="uid://c802uapguqrwh" path="res://assets/sprites/ParallaxSunset/Sunset/3.png" id="5_oc0dg"]
+[ext_resource type="Texture2D" uid="uid://dk7i06wyte7yt" path="res://assets/sprites/ParallaxSunset/Sunset/4.png" id="6_34ime"]
+[ext_resource type="Texture2D" uid="uid://drmc7o5qojdc1" path="res://assets/sprites/ParallaxSunset/Sunset/5.png" id="7_j54v5"]
+[ext_resource type="Texture2D" uid="uid://buhrcakeeband" path="res://assets/sprites/ParallaxSunset/Sunset/6.png" id="8_hpbjc"]
+[ext_resource type="Texture2D" uid="uid://don4rgf4kqf75" path="res://assets/sprites/ParallaxSunset/Sunset/7.png" id="9_duc24"]
+[ext_resource type="Texture2D" uid="uid://d2yuf3o5f4q86" path="res://assets/sprites/ParallaxSunset/Sunset/8.png" id="10_iciyc"]
+[ext_resource type="FontFile" uid="uid://bo8wxui5bkcwf" path="res://font/Super Comic.ttf" id="11_5u557"]
+
+[sub_resource type="GDScript" id="GDScript_tni1l"]
+script/source = "extends ParallaxBackground
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	scroll_base_offset.x -= 40*delta
+"
+
+[node name="LoseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j2l3c")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scale = Vector2(1.83, 1.83)
+transform = Transform2D(1.83, 0, 0, 1.83, 0, 0)
+scroll_base_scale = Vector2(0, 0)
+scroll_ignore_camera_zoom = true
+script = SubResource("GDScript_tni1l")
+
+[node name="background" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(524.59, 295.082)
+scale = Vector2(3.27869, 3.27869)
+texture = ExtResource("2_6uquu")
+
+[node name="farMountains" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1049, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/farMountains"]
+position = Vector2(524.59, 295.082)
+scale = Vector2(3.27869, 3.27869)
+texture = ExtResource("3_dy542")
+
+[node name="nearMountains" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(1049, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/nearMountains"]
+position = Vector2(524.59, 295.082)
+scale = Vector2(3.27869, 3.27869)
+texture = ExtResource("4_h8fn1")
+
+[node name="clouds" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1049, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/clouds"]
+position = Vector2(524.59, 295.082)
+scale = Vector2(3.27869, 3.27869)
+texture = ExtResource("5_oc0dg")
+
+[node name="farTrees" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1049, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/farTrees"]
+position = Vector2(524.59, 295.082)
+scale = Vector2(3.27869, 3.27869)
+texture = ExtResource("6_34ime")
+
+[node name="middleTrees" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1049, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/middleTrees"]
+position = Vector2(524.59, 295.082)
+scale = Vector2(3.27869, 3.27869)
+texture = ExtResource("7_j54v5")
+
+[node name="nearTrees" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(1049, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/nearTrees"]
+position = Vector2(524.59, 295.082)
+scale = Vector2(3.27869, 3.27869)
+texture = ExtResource("8_hpbjc")
+
+[node name="farGrass" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(1049, 0)
+
+[node name="farGrass" type="Sprite2D" parent="ParallaxBackground/farGrass"]
+position = Vector2(524.59, 295.082)
+scale = Vector2(3.27869, 3.27869)
+texture = ExtResource("9_duc24")
+
+[node name="nearGrass" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.9, 0.9)
+motion_mirroring = Vector2(1049, 0)
+
+[node name="nearGrass" type="Sprite2D" parent="ParallaxBackground/nearGrass"]
+position = Vector2(524.59, 295.082)
+scale = Vector2(3.27869, 3.27869)
+texture = ExtResource("10_iciyc")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 303.0
+offset_top = 248.0
+offset_right = 1589.0
+offset_bottom = 868.0
+color = Color(0.639216, 0.639216, 0.639216, 0.85098)
+
+[node name="LoseLabel" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 130.0
+offset_right = 1221.0
+offset_bottom = 386.0
+theme_override_fonts/font = ExtResource("11_5u557")
+theme_override_font_sizes/font_size = 40
+text = "You lost! 
+
+
+
+Try Again or Go back to the Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Retry" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.031
+anchor_top = 0.065
+anchor_right = 0.031
+anchor_bottom = 0.065
+offset_left = 282.134
+offset_top = 381.7
+offset_right = 408.134
+offset_bottom = 502.7
+theme_override_fonts/font = ExtResource("11_5u557")
+text = "Retry"
+
+[node name="Menu" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.031
+anchor_top = 0.065
+anchor_right = 0.031
+anchor_bottom = 0.065
+offset_left = 809.134
+offset_top = 381.7
+offset_right = 935.134
+offset_bottom = 502.7
+theme_override_fonts/font = ExtResource("11_5u557")
+text = "Menu
+"
+
+[connection signal="pressed" from="ColorRect/Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="ColorRect/Menu" to="." method="_on_menu_pressed"]

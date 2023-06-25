@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://dt2ejofrmg37y"]
+
+[ext_resource type="Texture2D" uid="uid://bhj5ogdvtlk25" path="res://assets/sprites/Retro RPG Series - Animal Wildlife/flag animation.png" id="1_8jthy"]
+[ext_resource type="Script" path="res://scenes/flag.gd" id="1_n3lrg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y24jm"]
+size = Vector2(20, 224)
+
+[sub_resource type="Animation" id="Animation_b78uk"]
+resource_name = "flag_idle"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x4q70"]
+_data = {
+"flag_idle": SubResource("Animation_b78uk")
+}
+
+[node name="flag" type="Area2D"]
+script = ExtResource("1_n3lrg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-16, -80)
+shape = SubResource("RectangleShape2D_y24jm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_8jthy")
+hframes = 5
+frame = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+speed_scale = 0.8
+libraries = {
+"": SubResource("AnimationLibrary_x4q70")
+}
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
