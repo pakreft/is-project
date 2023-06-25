@@ -12,9 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://don4rgf4kqf75" path="res://assets/sprites/ParallaxSunset/Sunset/7.png" id="10_gd00j"]
 [ext_resource type="Texture2D" uid="uid://d2yuf3o5f4q86" path="res://assets/sprites/ParallaxSunset/Sunset/8.png" id="11_y0mwn"]
 [ext_resource type="Texture2D" uid="uid://deiwoxq5qcajd" path="res://assets/sprites/PlatformerForestTileset16x16/tileset.png" id="12_2p7j0"]
-[ext_resource type="PackedScene" path="res://scenes/flag.tscn" id="13_o33c2"]
+[ext_resource type="PackedScene" uid="uid://dt2ejofrmg37y" path="res://scenes/flag.tscn" id="13_o33c2"]
 [ext_resource type="PackedScene" uid="uid://35ij4p0y15at" path="res://scenes/bear.tscn" id="14_l1wii"]
-[ext_resource type="PackedScene" path="res://scenes/bat.tscn" id="15_kve38"]
+[ext_resource type="PackedScene" uid="uid://dn127qf4x73in" path="res://scenes/bat.tscn" id="15_kve38"]
 
 [sub_resource type="GDScript" id="GDScript_6tkd8"]
 script/source = "extends ParallaxBackground

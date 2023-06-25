@@ -8,15 +8,11 @@ func _ready():
 	$Sounds.stream = jump
 
 func make_jump_sound():
+	$Sounds.stream = jump
+	$Sounds.volume_db = -25
+	$Sounds.pitch_scale = 1.7
+	$Sounds.play()
 	
-	if(pitch == 1.7):
-		$Sounds.play()
-		$Sounds.pitch_scale = 1.48
-		print("1")
-	if(pitch == 1.5):
-		$Sounds.play()
-		$Sounds.pitch_scale = 1.68
-		print("2")
 
 func play_game_over_sound():
 	$Sounds.stream = game_over

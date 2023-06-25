@@ -316,7 +316,7 @@ sources/1 = SubResource("TileSetAtlasSource_tdopr")
 script = ExtResource("1_8wh67")
 
 [node name="Player" parent="." instance=ExtResource("1_mcbjd")]
-position = Vector2(-384, 888)
+position = Vector2(-496, 888)
 move_speed = 1000
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]

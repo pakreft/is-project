@@ -37,6 +37,7 @@ func _physics_process(delta):
 	
 func _process(delta):
 	check_for_death()
+	pass
 
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("enemy"):
@@ -46,7 +47,7 @@ func get_gravity() -> float:
 	return jump_gravity if velocity.y < 0.0 else fall_gravity
 	
 func check_for_death():
-	if velocity.x <= 0 or position.y > 10_000:
+	if position.y > 10_000:
 		get_tree().change_scene_to_file("res://_debug/LoseMenu.tscn")
 
 func jump():
