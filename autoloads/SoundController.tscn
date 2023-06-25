@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://br3hwpurcjtut"]
+
+[ext_resource type="Script" path="res://autoloads/SoundController.gd" id="1_8kij7"]
+
+[node name="SoundController" type="Node"]
+script = ExtResource("1_8kij7")
+
+[node name="Sounds" type="AudioStreamPlayer" parent="."]
+volume_db = -27.758
+pitch_scale = 1.68

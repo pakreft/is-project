@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://ck1d5bxa0yeu2"]
+[gd_scene load_steps=6 format=3 uid="uid://ck1d5bxa0yeu2"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_htsep"]
 [ext_resource type="Texture2D" uid="uid://d36mikynfhye1" path="res://assets/sprites/player.png" id="2_akio3"]
+[ext_resource type="Texture2D" uid="uid://da4yibg0judo8" path="res://assets/fox-NESW.png" id="3_trs3o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sqvej"]
 size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5jd3j"]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_htsep")
@@ -22,3 +25,17 @@ offset = Vector2(400, 0)
 drag_vertical_enabled = true
 drag_top_margin = 0.5
 editor_draw_drag_margin = true
+
+[node name="Area2D" type="Area2D" parent="Camera2D"]
+position = Vector2(1367, -9)
+scale = Vector2(16.72, 15.44)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/Area2D"]
+scale = Vector2(-0.042, 8.11658)
+shape = SubResource("RectangleShape2D_5jd3j")
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D/Area2D"]
+scale = Vector2(0.0191388, 0.0181348)
+texture = ExtResource("3_trs3o")
+
+[connection signal="area_entered" from="Camera2D/Area2D" to="." method="_on_area_2d_area_entered"]

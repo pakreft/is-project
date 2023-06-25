@@ -18,6 +18,7 @@ func _physics_process(delta):
 	
 	if Input.is_action_pressed("jump") and is_on_floor():
 		jump()
+		SoundController.make_jump_sound()
 	
 	if Input.is_action_just_released("jump") and velocity.y < 0.0:
 		velocity.y *= low_jump_multiplier
@@ -34,3 +35,8 @@ func get_gravity() -> float:
 
 func jump():
 	velocity.y = jump_velocity
+
+
+func _on_area_2d_area_entered(area):
+	if area.is_in_group("enemy"):
+		area.run = true
