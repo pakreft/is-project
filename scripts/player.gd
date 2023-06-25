@@ -35,9 +35,8 @@ func _physics_process(delta):
 	move_and_slide()
 	
 func _process(delta):
-	if position.y > 10000:
-		position.x = 0
-		position.y = -20
+	if position.y > 5000:
+		get_tree().change_scene_to_file("res://_debug/LoseMenu.tscn")
 
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("enemy"):

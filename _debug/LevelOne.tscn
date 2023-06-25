@@ -12,9 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://deiwoxq5qcajd" path="res://assets/sprites/PlatformerForestTileset16x16/tileset.png" id="12_jt03c"]
 [ext_resource type="PackedScene" uid="uid://35ij4p0y15at" path="res://scenes/bear.tscn" id="13_2l4xo"]
 [ext_resource type="Texture2D" uid="uid://don4rgf4kqf75" path="res://assets/sprites/ParallaxSunset/Sunset/7.png" id="13_ru56s"]
-[ext_resource type="PackedScene" path="res://scenes/flag.tscn" id="14_gb46b"]
+[ext_resource type="PackedScene" uid="uid://dt2ejofrmg37y" path="res://scenes/flag.tscn" id="14_gb46b"]
 [ext_resource type="Texture2D" uid="uid://d2yuf3o5f4q86" path="res://assets/sprites/ParallaxSunset/Sunset/8.png" id="14_ygtno"]
-[ext_resource type="PackedScene" path="res://scenes/bat.tscn" id="15_qfem8"]
+[ext_resource type="PackedScene" uid="uid://dn127qf4x73in" path="res://scenes/bat.tscn" id="15_qfem8"]
 
 [sub_resource type="GDScript" id="GDScript_6tkd8"]
 script/source = "extends ParallaxBackground
@@ -316,7 +316,7 @@ sources/1 = SubResource("TileSetAtlasSource_tdopr")
 script = ExtResource("1_8wh67")
 
 [node name="Player" parent="." instance=ExtResource("1_mcbjd")]
-position = Vector2(-384, 792)
+position = Vector2(-384, 888)
 move_speed = 1000
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -436,7 +436,7 @@ position = Vector2(19944, 192)
 scale = Vector2(8, 8)
 
 [node name="bear6" parent="enemies" groups=["enemy"] instance=ExtResource("13_2l4xo")]
-position = Vector2(13080, 640)
+position = Vector2(13000, 640)
 scale = Vector2(8, 8)
 
 [node name="bear7" parent="enemies" groups=["enemy"] instance=ExtResource("13_2l4xo")]
@@ -532,11 +532,11 @@ position = Vector2(30480, 672)
 scale = Vector2(4, 4)
 
 [node name="bat21" parent="enemies" groups=["enemy"] instance=ExtResource("15_qfem8")]
-position = Vector2(31264, 368)
+position = Vector2(31408, 368)
 scale = Vector2(4, 4)
 
 [node name="bat22" parent="enemies" groups=["enemy"] instance=ExtResource("15_qfem8")]
-position = Vector2(32240, 88)
+position = Vector2(32312, 88)
 scale = Vector2(4, 4)
 
 [node name="bat23" parent="enemies" groups=["enemy"] instance=ExtResource("15_qfem8")]

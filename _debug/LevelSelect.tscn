@@ -1,17 +1,16 @@
-[gd_scene load_steps=14 format=3 uid="uid://c8lxhsh23wsld"]
+[gd_scene load_steps=13 format=3 uid="uid://c2mtonget1fyu"]
 
-[ext_resource type="Script" path="res://scripts/OptionsMenu.gd" id="1_bxy2l"]
-[ext_resource type="Texture2D" uid="uid://dfg4simi5o72r" path="res://assets/sprites/ParallaxSunset/Sunset/Background.png" id="2_6d6kt"]
-[ext_resource type="Texture2D" uid="uid://cp4widdhjc7hr" path="res://assets/sprites/ParallaxSunset/Sunset/1.png" id="3_p1dr0"]
-[ext_resource type="Texture2D" uid="uid://bs5cb4upag7eh" path="res://assets/sprites/ParallaxSunset/Sunset/2.png" id="4_ltyat"]
-[ext_resource type="Texture2D" uid="uid://c802uapguqrwh" path="res://assets/sprites/ParallaxSunset/Sunset/3.png" id="5_otxo4"]
-[ext_resource type="Texture2D" uid="uid://dk7i06wyte7yt" path="res://assets/sprites/ParallaxSunset/Sunset/4.png" id="6_chiyo"]
-[ext_resource type="Texture2D" uid="uid://drmc7o5qojdc1" path="res://assets/sprites/ParallaxSunset/Sunset/5.png" id="7_dvqo1"]
-[ext_resource type="Texture2D" uid="uid://buhrcakeeband" path="res://assets/sprites/ParallaxSunset/Sunset/6.png" id="8_wdxku"]
-[ext_resource type="Texture2D" uid="uid://don4rgf4kqf75" path="res://assets/sprites/ParallaxSunset/Sunset/7.png" id="9_ppjoa"]
-[ext_resource type="Texture2D" uid="uid://d2yuf3o5f4q86" path="res://assets/sprites/ParallaxSunset/Sunset/8.png" id="10_84v7l"]
-[ext_resource type="Theme" uid="uid://c02f3iitqaf3c" path="res://themes/ButtonTheme.tres" id="11_p1adv"]
-[ext_resource type="Texture2D" uid="uid://d36mikynfhye1" path="res://assets/sprites/player/player.png" id="12_me1b2"]
+[ext_resource type="Script" path="res://scripts/OptionsMenu.gd" id="1_k8ihb"]
+[ext_resource type="Texture2D" uid="uid://dfg4simi5o72r" path="res://assets/sprites/ParallaxSunset/Sunset/Background.png" id="2_k0dji"]
+[ext_resource type="Texture2D" uid="uid://cp4widdhjc7hr" path="res://assets/sprites/ParallaxSunset/Sunset/1.png" id="3_dqhmx"]
+[ext_resource type="Texture2D" uid="uid://bs5cb4upag7eh" path="res://assets/sprites/ParallaxSunset/Sunset/2.png" id="4_w418u"]
+[ext_resource type="Texture2D" uid="uid://c802uapguqrwh" path="res://assets/sprites/ParallaxSunset/Sunset/3.png" id="5_2nqo3"]
+[ext_resource type="Texture2D" uid="uid://dk7i06wyte7yt" path="res://assets/sprites/ParallaxSunset/Sunset/4.png" id="6_h5a4q"]
+[ext_resource type="Texture2D" uid="uid://drmc7o5qojdc1" path="res://assets/sprites/ParallaxSunset/Sunset/5.png" id="7_yott0"]
+[ext_resource type="Texture2D" uid="uid://buhrcakeeband" path="res://assets/sprites/ParallaxSunset/Sunset/6.png" id="8_73g13"]
+[ext_resource type="Texture2D" uid="uid://don4rgf4kqf75" path="res://assets/sprites/ParallaxSunset/Sunset/7.png" id="9_2idc2"]
+[ext_resource type="Texture2D" uid="uid://d2yuf3o5f4q86" path="res://assets/sprites/ParallaxSunset/Sunset/8.png" id="10_uwrjy"]
+[ext_resource type="Theme" uid="uid://c02f3iitqaf3c" path="res://themes/ButtonTheme.tres" id="11_xrc6q"]
 
 [sub_resource type="GDScript" id="GDScript_d3hkh"]
 script/source = "extends ParallaxBackground
@@ -34,7 +33,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_bxy2l")
+script = ExtResource("1_k8ihb")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scale = Vector2(1.83, 1.83)
@@ -46,7 +45,7 @@ script = SubResource("GDScript_d3hkh")
 [node name="background" type="Sprite2D" parent="ParallaxBackground"]
 position = Vector2(524.59, 295.082)
 scale = Vector2(3.27869, 3.27869)
-texture = ExtResource("2_6d6kt")
+texture = ExtResource("2_k0dji")
 
 [node name="farMountains" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.2, 0.2)
@@ -55,7 +54,7 @@ motion_mirroring = Vector2(1049, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/farMountains"]
 position = Vector2(524.59, 295.082)
 scale = Vector2(3.27869, 3.27869)
-texture = ExtResource("3_p1dr0")
+texture = ExtResource("3_dqhmx")
 
 [node name="nearMountains" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.3, 0.3)
@@ -64,7 +63,7 @@ motion_mirroring = Vector2(1049, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/nearMountains"]
 position = Vector2(524.59, 295.082)
 scale = Vector2(3.27869, 3.27869)
-texture = ExtResource("4_ltyat")
+texture = ExtResource("4_w418u")
 
 [node name="clouds" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2(1049, 0)
@@ -72,7 +71,7 @@ motion_mirroring = Vector2(1049, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/clouds"]
 position = Vector2(524.59, 295.082)
 scale = Vector2(3.27869, 3.27869)
-texture = ExtResource("5_otxo4")
+texture = ExtResource("5_2nqo3")
 
 [node name="farTrees" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.5, 0.5)
@@ -81,7 +80,7 @@ motion_mirroring = Vector2(1049, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/farTrees"]
 position = Vector2(524.59, 295.082)
 scale = Vector2(3.27869, 3.27869)
-texture = ExtResource("6_chiyo")
+texture = ExtResource("6_h5a4q")
 
 [node name="middleTrees" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.5, 0.5)
@@ -90,7 +89,7 @@ motion_mirroring = Vector2(1049, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/middleTrees"]
 position = Vector2(524.59, 295.082)
 scale = Vector2(3.27869, 3.27869)
-texture = ExtResource("7_dvqo1")
+texture = ExtResource("7_yott0")
 
 [node name="nearTrees" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.7, 0.7)
@@ -99,7 +98,7 @@ motion_mirroring = Vector2(1049, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/nearTrees"]
 position = Vector2(524.59, 295.082)
 scale = Vector2(3.27869, 3.27869)
-texture = ExtResource("8_wdxku")
+texture = ExtResource("8_73g13")
 
 [node name="farGrass" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.8, 0.8)
@@ -108,7 +107,7 @@ motion_mirroring = Vector2(1049, 0)
 [node name="farGrass" type="Sprite2D" parent="ParallaxBackground/farGrass"]
 position = Vector2(524.59, 295.082)
 scale = Vector2(3.27869, 3.27869)
-texture = ExtResource("9_ppjoa")
+texture = ExtResource("9_2idc2")
 
 [node name="nearGrass" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.9, 0.9)
@@ -117,7 +116,7 @@ motion_mirroring = Vector2(1049, 0)
 [node name="nearGrass" type="Sprite2D" parent="ParallaxBackground/nearGrass"]
 position = Vector2(524.59, 295.082)
 scale = Vector2(3.27869, 3.27869)
-texture = ExtResource("10_84v7l")
+texture = ExtResource("10_uwrjy")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
@@ -132,7 +131,7 @@ layout_mode = 2
 
 [node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("11_p1adv")
+theme = ExtResource("11_xrc6q")
 text = "Back"
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -144,56 +143,67 @@ offset_bottom = 163.0
 scale = Vector2(39.7679, 17.3651)
 color = Color(0.411765, 0.403922, 0.560784, 0.890196)
 
-[node name="Button" type="Button" parent="."]
+[node name="stageOne" type="Button" parent="."]
 layout_mode = 0
 offset_left = 305.0
-offset_top = 280.0
+offset_top = 282.0
 offset_right = 441.0
-offset_bottom = 416.0
+offset_bottom = 418.0
 scale = Vector2(2.175, 2.33193)
-icon = ExtResource("12_me1b2")
+text = "Stage
+1"
 
-[node name="Label" type="Label" parent="Button"]
+[node name="Label" type="Label" parent="stageOne"]
+visible = false
 layout_mode = 0
 offset_left = 45.9769
 offset_top = 138.941
 offset_right = 86.9769
 offset_bottom = 164.941
-text = "1,79$"
+text = "1"
+horizontal_alignment = 1
 
-[node name="Button2" type="Button" parent="."]
+[node name="stageTwo" type="Button" parent="."]
 layout_mode = 0
 offset_left = 800.0
 offset_top = 280.0
 offset_right = 936.0
 offset_bottom = 416.0
 scale = Vector2(2.175, 2.33193)
-icon = ExtResource("12_me1b2")
+text = "Stage
+2"
 
-[node name="Label" type="Label" parent="Button2"]
+[node name="Label" type="Label" parent="stageTwo"]
+visible = false
 layout_mode = 0
 offset_left = 29.885
 offset_top = 138.512
 offset_right = 103.885
 offset_bottom = 164.512
-text = "1̵,̵9̵9̵ 0,99$"
+text = "2"
 horizontal_alignment = 1
 
-[node name="Button3" type="Button" parent="."]
+[node name="stageThree" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1300.0
-offset_top = 279.0
-offset_right = 1436.0
-offset_bottom = 415.0
+offset_left = 1301.0
+offset_top = 278.0
+offset_right = 1437.0
+offset_bottom = 414.0
 scale = Vector2(2.175, 2.33193)
-icon = ExtResource("12_me1b2")
+text = "Stage
+3"
 
-[node name="Label" type="Label" parent="Button3"]
+[node name="Label" type="Label" parent="stageThree"]
+visible = false
 layout_mode = 0
-offset_left = 47.3563
-offset_top = 139.369
-offset_right = 88.3563
-offset_bottom = 165.369
-text = "1,29$"
+offset_left = 47.816
+offset_top = 139.37
+offset_right = 88.816
+offset_bottom = 165.37
+text = "3"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="stageOne" to="." method="_on_stage_one_pressed"]
+[connection signal="pressed" from="stageTwo" to="." method="_on_stage_two_pressed"]
+[connection signal="pressed" from="stageThree" to="." method="_on_stage_three_pressed"]
