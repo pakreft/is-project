@@ -1,0 +1,199 @@
+[gd_scene load_steps=14 format=3 uid="uid://c8lxhsh23wsld"]
+
+[ext_resource type="Script" path="res://scripts/OptionsMenu.gd" id="1_bxy2l"]
+[ext_resource type="Texture2D" uid="uid://dfg4simi5o72r" path="res://assets/sprites/ParallaxSunset/Sunset/Background.png" id="2_6d6kt"]
+[ext_resource type="Texture2D" uid="uid://cp4widdhjc7hr" path="res://assets/sprites/ParallaxSunset/Sunset/1.png" id="3_p1dr0"]
+[ext_resource type="Texture2D" uid="uid://bs5cb4upag7eh" path="res://assets/sprites/ParallaxSunset/Sunset/2.png" id="4_ltyat"]
+[ext_resource type="Texture2D" uid="uid://c802uapguqrwh" path="res://assets/sprites/ParallaxSunset/Sunset/3.png" id="5_otxo4"]
+[ext_resource type="Texture2D" uid="uid://dk7i06wyte7yt" path="res://assets/sprites/ParallaxSunset/Sunset/4.png" id="6_chiyo"]
+[ext_resource type="Texture2D" uid="uid://drmc7o5qojdc1" path="res://assets/sprites/ParallaxSunset/Sunset/5.png" id="7_dvqo1"]
+[ext_resource type="Texture2D" uid="uid://buhrcakeeband" path="res://assets/sprites/ParallaxSunset/Sunset/6.png" id="8_wdxku"]
+[ext_resource type="Texture2D" uid="uid://don4rgf4kqf75" path="res://assets/sprites/ParallaxSunset/Sunset/7.png" id="9_ppjoa"]
+[ext_resource type="Texture2D" uid="uid://d2yuf3o5f4q86" path="res://assets/sprites/ParallaxSunset/Sunset/8.png" id="10_84v7l"]
+[ext_resource type="Theme" uid="uid://c02f3iitqaf3c" path="res://themes/ButtonTheme.tres" id="11_p1adv"]
+[ext_resource type="Texture2D" uid="uid://d36mikynfhye1" path="res://assets/sprites/player.png" id="12_me1b2"]
+
+[sub_resource type="GDScript" id="GDScript_d3hkh"]
+script/source = "extends ParallaxBackground
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	scroll_base_offset.x -= 40*delta
+"
+
+[node name="CreditsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bxy2l")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scale = Vector2(1.83, 1.83)
+transform = Transform2D(1.83, 0, 0, 1.83, 0, 0)
+scroll_base_scale = Vector2(0, 0)
+scroll_ignore_camera_zoom = true
+script = SubResource("GDScript_d3hkh")
+
+[node name="background" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(524.59, 295.082)
+scale = Vector2(3.27869, 3.27869)
+texture = ExtResource("2_6d6kt")
+
+[node name="farMountains" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1049, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/farMountains"]
+position = Vector2(524.59, 295.082)
+scale = Vector2(3.27869, 3.27869)
+texture = ExtResource("3_p1dr0")
+
+[node name="nearMountains" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(1049, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/nearMountains"]
+position = Vector2(524.59, 295.082)
+scale = Vector2(3.27869, 3.27869)
+texture = ExtResource("4_ltyat")
+
+[node name="clouds" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1049, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/clouds"]
+position = Vector2(524.59, 295.082)
+scale = Vector2(3.27869, 3.27869)
+texture = ExtResource("5_otxo4")
+
+[node name="farTrees" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1049, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/farTrees"]
+position = Vector2(524.59, 295.082)
+scale = Vector2(3.27869, 3.27869)
+texture = ExtResource("6_chiyo")
+
+[node name="middleTrees" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1049, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/middleTrees"]
+position = Vector2(524.59, 295.082)
+scale = Vector2(3.27869, 3.27869)
+texture = ExtResource("7_dvqo1")
+
+[node name="nearTrees" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(1049, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/nearTrees"]
+position = Vector2(524.59, 295.082)
+scale = Vector2(3.27869, 3.27869)
+texture = ExtResource("8_wdxku")
+
+[node name="farGrass" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(1049, 0)
+
+[node name="farGrass" type="Sprite2D" parent="ParallaxBackground/farGrass"]
+position = Vector2(524.59, 295.082)
+scale = Vector2(3.27869, 3.27869)
+texture = ExtResource("9_ppjoa")
+
+[node name="nearGrass" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.9, 0.9)
+motion_mirroring = Vector2(1049, 0)
+
+[node name="nearGrass" type="Sprite2D" parent="ParallaxBackground/nearGrass"]
+position = Vector2(524.59, 295.082)
+scale = Vector2(3.27869, 3.27869)
+texture = ExtResource("10_84v7l")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 652.0
+offset_top = 953.0
+offset_right = 802.0
+offset_bottom = 1103.0
+scale = Vector2(4, 4)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("11_p1adv")
+text = "Back"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 123.0
+offset_right = 202.0
+offset_bottom = 163.0
+scale = Vector2(39.7679, 17.3651)
+color = Color(0.411765, 0.403922, 0.560784, 0.890196)
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 305.0
+offset_top = 280.0
+offset_right = 441.0
+offset_bottom = 416.0
+scale = Vector2(2.175, 2.33193)
+icon = ExtResource("12_me1b2")
+
+[node name="Label" type="Label" parent="Button"]
+layout_mode = 0
+offset_left = 45.9769
+offset_top = 138.941
+offset_right = 86.9769
+offset_bottom = 164.941
+text = "1,79$"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 800.0
+offset_top = 280.0
+offset_right = 936.0
+offset_bottom = 416.0
+scale = Vector2(2.175, 2.33193)
+icon = ExtResource("12_me1b2")
+
+[node name="Label" type="Label" parent="Button2"]
+layout_mode = 0
+offset_left = 29.885
+offset_top = 138.512
+offset_right = 103.885
+offset_bottom = 164.512
+text = "1̵,̵9̵9̵ 0,99$"
+horizontal_alignment = 1
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1300.0
+offset_top = 279.0
+offset_right = 1436.0
+offset_bottom = 415.0
+scale = Vector2(2.175, 2.33193)
+icon = ExtResource("12_me1b2")
+
+[node name="Label" type="Label" parent="Button3"]
+layout_mode = 0
+offset_left = 47.3563
+offset_top = 139.369
+offset_right = 88.3563
+offset_bottom = 165.369
+text = "1,29$"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

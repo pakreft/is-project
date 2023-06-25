@@ -1,0 +1,172 @@
+[gd_scene load_steps=14 format=3 uid="uid://dyj70vnp1xgn4"]
+
+[ext_resource type="Script" path="res://scripts/OptionsMenu.gd" id="1_3lt5b"]
+[ext_resource type="Theme" uid="uid://c02f3iitqaf3c" path="res://themes/ButtonTheme.tres" id="2_uen7j"]
+[ext_resource type="Texture2D" uid="uid://dfg4simi5o72r" path="res://assets/sprites/ParallaxSunset/Sunset/Background.png" id="3_wjogh"]
+[ext_resource type="Texture2D" uid="uid://cp4widdhjc7hr" path="res://assets/sprites/ParallaxSunset/Sunset/1.png" id="4_oj6ry"]
+[ext_resource type="Texture2D" uid="uid://bs5cb4upag7eh" path="res://assets/sprites/ParallaxSunset/Sunset/2.png" id="5_ks4pf"]
+[ext_resource type="Texture2D" uid="uid://c802uapguqrwh" path="res://assets/sprites/ParallaxSunset/Sunset/3.png" id="6_gbgbd"]
+[ext_resource type="Texture2D" uid="uid://dk7i06wyte7yt" path="res://assets/sprites/ParallaxSunset/Sunset/4.png" id="7_xc2c0"]
+[ext_resource type="Texture2D" uid="uid://drmc7o5qojdc1" path="res://assets/sprites/ParallaxSunset/Sunset/5.png" id="8_v4nbb"]
+[ext_resource type="Texture2D" uid="uid://buhrcakeeband" path="res://assets/sprites/ParallaxSunset/Sunset/6.png" id="9_byttq"]
+[ext_resource type="Texture2D" uid="uid://don4rgf4kqf75" path="res://assets/sprites/ParallaxSunset/Sunset/7.png" id="10_3gca7"]
+[ext_resource type="Texture2D" uid="uid://d2yuf3o5f4q86" path="res://assets/sprites/ParallaxSunset/Sunset/8.png" id="11_eujlg"]
+[ext_resource type="FontFile" uid="uid://bo8wxui5bkcwf" path="res://font/Super Comic.ttf" id="12_pyc4g"]
+
+[sub_resource type="GDScript" id="GDScript_d3hkh"]
+script/source = "extends ParallaxBackground
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	scroll_base_offset.x -= 40*delta
+"
+
+[node name="CreditsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3lt5b")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scale = Vector2(1.83, 1.83)
+transform = Transform2D(1.83, 0, 0, 1.83, 0, 0)
+scroll_base_scale = Vector2(0, 0)
+scroll_ignore_camera_zoom = true
+script = SubResource("GDScript_d3hkh")
+
+[node name="background" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(524.59, 295.082)
+scale = Vector2(3.27869, 3.27869)
+texture = ExtResource("3_wjogh")
+
+[node name="farMountains" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1049, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/farMountains"]
+position = Vector2(524.59, 295.082)
+scale = Vector2(3.27869, 3.27869)
+texture = ExtResource("4_oj6ry")
+
+[node name="nearMountains" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(1049, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/nearMountains"]
+position = Vector2(524.59, 295.082)
+scale = Vector2(3.27869, 3.27869)
+texture = ExtResource("5_ks4pf")
+
+[node name="clouds" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1049, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/clouds"]
+position = Vector2(524.59, 295.082)
+scale = Vector2(3.27869, 3.27869)
+texture = ExtResource("6_gbgbd")
+
+[node name="farTrees" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1049, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/farTrees"]
+position = Vector2(524.59, 295.082)
+scale = Vector2(3.27869, 3.27869)
+texture = ExtResource("7_xc2c0")
+
+[node name="middleTrees" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1049, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/middleTrees"]
+position = Vector2(524.59, 295.082)
+scale = Vector2(3.27869, 3.27869)
+texture = ExtResource("8_v4nbb")
+
+[node name="nearTrees" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(1049, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/nearTrees"]
+position = Vector2(524.59, 295.082)
+scale = Vector2(3.27869, 3.27869)
+texture = ExtResource("9_byttq")
+
+[node name="farGrass" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(1049, 0)
+
+[node name="farGrass" type="Sprite2D" parent="ParallaxBackground/farGrass"]
+position = Vector2(524.59, 295.082)
+scale = Vector2(3.27869, 3.27869)
+texture = ExtResource("10_3gca7")
+
+[node name="nearGrass" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.9, 0.9)
+motion_mirroring = Vector2(1049, 0)
+
+[node name="nearGrass" type="Sprite2D" parent="ParallaxBackground/nearGrass"]
+position = Vector2(524.59, 295.082)
+scale = Vector2(3.27869, 3.27869)
+texture = ExtResource("11_eujlg")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 671.0
+offset_top = 954.0
+offset_right = 821.0
+offset_bottom = 1104.0
+scale = Vector2(4, 4)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_uen7j")
+text = "Back"
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 555.0
+offset_top = 228.0
+offset_right = 1092.0
+offset_bottom = 628.0
+scale = Vector2(1.56, 1.48)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+size_flags_stretch_ratio = 7.52
+
+[node name="Label3" type="Label" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.12549, 0.0588235, 0.0980392, 1)
+theme_override_fonts/font = ExtResource("12_pyc4g")
+text = "Lennard Burrmann, Lukas Henzgen, Pawel kreft"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.12549, 0.0588235, 0.0980392, 1)
+theme_override_fonts/font = ExtResource("12_pyc4g")
+text = "Artwork by Namatnieks, kayillustrations,
+ElectricLemon & AntumDeluge"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.12549, 0.0588235, 0.0980392, 1)
+theme_override_fonts/font = ExtResource("12_pyc4g")
+text = "Music by Marllon Silva (xDeviruchi)"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://d0i61jov05v03"]
+[gd_scene load_steps=14 format=3 uid="uid://d0i61jov05v03"]
 
 [ext_resource type="Script" path="res://scripts/MainMenu.gd" id="1_vjlj0"]
 [ext_resource type="Theme" uid="uid://c02f3iitqaf3c" path="res://themes/ButtonTheme.tres" id="2_i3gpf"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://buhrcakeeband" path="res://assets/sprites/ParallaxSunset/Sunset/6.png" id="9_umvt6"]
 [ext_resource type="Texture2D" uid="uid://don4rgf4kqf75" path="res://assets/sprites/ParallaxSunset/Sunset/7.png" id="10_427hx"]
 [ext_resource type="Texture2D" uid="uid://d2yuf3o5f4q86" path="res://assets/sprites/ParallaxSunset/Sunset/8.png" id="11_d1jne"]
+[ext_resource type="FontFile" uid="uid://bo8wxui5bkcwf" path="res://font/Super Comic.ttf" id="12_mqjbx"]
 
 [sub_resource type="GDScript" id="GDScript_veyv3"]
 script/source = "extends ParallaxBackground
@@ -34,31 +35,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vjlj0")
-
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_left = 123.0
-offset_top = 681.0
-offset_right = 273.0
-offset_bottom = 831.0
-scale = Vector2(3.622, 4)
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="PlayButton" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("2_i3gpf")
-text = "Play"
-
-[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("2_i3gpf")
-text = "Options
-"
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scale = Vector2(1.83, 1.83)
@@ -143,5 +119,76 @@ position = Vector2(524.59, 295.082)
 scale = Vector2(3.27869, 3.27869)
 texture = ExtResource("11_d1jne")
 
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 681.0
+offset_right = 273.0
+offset_bottom = 831.0
+scale = Vector2(3.622, 4)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PlayButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_i3gpf")
+text = "Play"
+
+[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_i3gpf")
+text = "Options
+"
+
+[node name="Credits" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_i3gpf")
+text = "Credits
+"
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 2
+offset_left = 124.0
+offset_top = 56.0
+offset_right = 274.0
+offset_bottom = 206.0
+scale = Vector2(3.622, 3.622)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+
+[node name="Shop" type="Button" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_i3gpf")
+text = "Shop
+"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 412.0
+offset_top = 203.0
+offset_right = 452.0
+offset_bottom = 243.0
+scale = Vector2(26.7739, 2.53251)
+color = Color(1, 0.768627, 1, 0.576471)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 437.0
+offset_top = 220.0
+offset_right = 612.0
+offset_bottom = 249.0
+scale = Vector2(5.93537, 4.36)
+theme_override_colors/font_color = Color(0.568627, 0.317647, 0.619608, 1)
+theme_override_fonts/font = ExtResource("12_mqjbx")
+theme_override_font_sizes/font_size = 18
+text = "Forest Frenzy"
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/Shop" to="." method="_on_shop_pressed"]
