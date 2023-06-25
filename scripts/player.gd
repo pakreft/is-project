@@ -19,6 +19,7 @@ var jumping = false
 func _physics_process(delta):
 	velocity.x = move_speed
 	velocity.y += get_gravity() * delta
+	check_for_death()
 	
 	if is_on_floor() and jumping:
 		jumping = false
@@ -35,8 +36,7 @@ func _physics_process(delta):
 	move_and_slide()
 	
 func _process(delta):
-	if position.y > 5000:
-		get_tree().change_scene_to_file("res://_debug/LoseMenu.tscn")
+	check_for_death()
 
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("enemy"):
@@ -44,6 +44,10 @@ func _on_area_2d_area_entered(area):
 
 func get_gravity() -> float:
 	return jump_gravity if velocity.y < 0.0 else fall_gravity
+	
+func check_for_death():
+	if velocity.x <= 0 or position.y > 10_000:
+		get_tree().change_scene_to_file("res://_debug/LoseMenu.tscn")
 
 func jump():
 	jumping = true
